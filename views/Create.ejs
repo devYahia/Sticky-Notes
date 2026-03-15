@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Note</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; color: #333; }
+        h1 { margin-bottom: 30px; font-weight: 600; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 14px; color: #555; }
+        input[type="text"], textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; box-sizing: border-box; transition: border-color 0.2s; font-family: inherit; }
+        input[type="text"]:focus, textarea:focus { outline: none; border-color: #333; }
+        textarea { min-height: 200px; resize: vertical; line-height: 1.5; }
+        .actions { display: flex; gap: 15px; align-items: center; margin-top: 30px; }
+        button { background: #222; color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 500; }
+        button:hover { opacity: 0.9; }
+        .cancel { color: #666; text-decoration: none; font-size: 15px; }
+        .cancel:hover { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>New Note</h1>
+    <form action="/notes" method="POST">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required placeholder="Note title" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea id="content" name="content" required placeholder="Write your note here..."></textarea>
+        </div>
+        <div class="actions">
+            <button type="submit">Save Note</button>
+            <a href="/notes" class="cancel">Cancel</a>
+        </div>
+    </form>
+</body>
+</html>
