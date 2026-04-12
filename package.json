@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "@types/mongoose": "^5.11.96",
+    "dotenv": "^17.4.1",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.4.1",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.14",
+    "typescript": "^6.0.2"
+  },
+  "name": "ts-sticky-notes",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.6.0"
+  }
+}
